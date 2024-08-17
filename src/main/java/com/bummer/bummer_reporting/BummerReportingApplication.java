@@ -9,5 +9,4 @@ public class BummerReportingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BummerReportingApplication.class, args);
 	}
-
 }

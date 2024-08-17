@@ -16,6 +16,9 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
                                 .requestMatchers("/api/reviews/**").permitAll() // Allow access to /api/reviews endpoints
+                                .requestMatchers("/api/restaurants/**").permitAll() // Allow access to /api/restaurants endpoints
+                                .requestMatchers("/api/address/**").permitAll() // Allow access to /api/address endpoints
+                                .requestMatchers("/api/reports/**").permitAll() // Allow access to /api/reports endpoints
                                 .anyRequest().authenticated() // All other endpoints require authentication
                 )
                 .csrf(csrf -> csrf.disable()); // Disable CSRF protection
